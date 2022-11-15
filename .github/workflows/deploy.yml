@@ -28,6 +28,8 @@ jobs:
       - name: Setup kubectl
         id: install-kubectl
         uses: azure/setup-kubectl@v3
+      - name: check file
+        run: ls ~/.kube/config
       - name: Terraform Init Istio
         run: terraform init
       - name: Terraform Format Istio
