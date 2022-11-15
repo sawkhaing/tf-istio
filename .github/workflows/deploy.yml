@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      TF_KUBE_CONFIG_PATH: $KUBE_CONFIG_PATH
     defaults:
       run:
         shell: bash
@@ -28,8 +30,6 @@ jobs:
       - name: Setup kubectl
         id: install-kubectl
         uses: azure/setup-kubectl@v3
-      - name: check file
-        run: ls ~/.kube/config
       - name: Terraform Init Istio
         run: terraform init
       - name: Terraform Format Istio
