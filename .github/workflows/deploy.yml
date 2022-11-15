@@ -9,7 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env: 
-      TF_VAR_config_path: $KUBE_CONFIG_PATH
+      TF_VAR_config_path: ${{ KUBE_CONFIG_PATH }}
     defaults:
       run:
         shell: bash
