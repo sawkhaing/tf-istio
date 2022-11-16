@@ -37,10 +37,7 @@ jobs:
 
       - name: Setup kubectl
         id: install-kubectl
-
         uses: azure/setup-kubectl@v3
-      - name: test
-        run: env
 
       - name: Terraform Init Istio
         run: terraform init
