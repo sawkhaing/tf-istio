@@ -103,3 +103,4 @@ export CONTAINER_NAME=tfstate</code></pre>
 - Learn spn
 - Learn azurerm storage backend
 - Learn helm provider
+- Learn Istio
